@@ -19,19 +19,19 @@ function App() {
   // );
   return <Router basename={process.env.PUBLIC_URL}>
     <div id="navbar">
-        <Link to="/">
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/">
           Home
         </Link>
-        <Link to="/search">
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/search">
           Search
         </Link>
-        <Link to="/queryOne">
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryOne">
           Advanced Query 1
         </Link>
-        <Link to="/queryTwo">
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryTwo">
           Advanced Query 2
         </Link>
-        <Link to="/reviews">
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/reviews">
           Reviews
         </Link>
       </div>
