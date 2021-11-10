@@ -9,3 +9,15 @@ header {
     font-size: 150px;
     color: #E84A27;
 }
+
+.header_text {
+    font-size: 30px;
+    color: #E84A27;
+}
+
+.header_image {
+    margin-top: 10px;
+    margin-inline: -5px;
+    height: 25px;
+    width: 25px;
+}

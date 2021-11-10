@@ -131,11 +131,11 @@ function Reviews() {
 
     return <body>
     <header> 
-        <span class="title_text">RateM</span>
-        <img class="title_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
-        <span class="title_text">Professor</span>
+        <span className="header_text">RateM</span>
+        <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I"></img>
+        <span className="header_text">Professor</span>
     </header>
-    <section class="body">
+    <section className="body">
         <div>
         Write a review:
         <br />
