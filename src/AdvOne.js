@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 
 function AdvancedQueryOne() {
+    const [status, setStatus] = useState(false);
     const [bestProfs, setBestProfs] = useState([]);
 
     // get best professors
@@ -33,18 +34,22 @@ function AdvancedQueryOne() {
     </header>
     <section class="body">
         <div>This is the page for the first advanced query, which returns top 15 best rated professors.</div>
-        <div>Click the button below to execute the query.</div>
-        
-        <div>
-        <button>EXECUTE QUERY HERE</button>
-        </div>
+
+        {status ? (
+            <div>
+                Here are the fifteen professors with the highest reviews:
+                {bestProfs}
+            </div> ) : (
+            <div>
+                Click the button to view the top rated professors!
+            </div>
+        )}
 
         <div>
-            these are the best professors: 
-
-            {bestProfs}
+            {!status && (<button onClick={() => setStatus(true)}>
+                EXECUTE QUERY HERE
+            </button>)}
         </div>
-        
     </section>
 </body>
 }
