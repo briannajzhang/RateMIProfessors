@@ -41,7 +41,7 @@ function AdvancedQueryTwo() {
                 {mostRated}
             </div> ) : (
             <div>
-                Click the button to view the most reviewd courses!
+                Click the button to view the most reviewed courses!
             </div>
         )}
 
