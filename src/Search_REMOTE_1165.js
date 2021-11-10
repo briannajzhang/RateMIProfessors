@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import query from "./api";
-import './Style.css'
 
 const apiGetColumnNames = (column: string): string[] => {
     return query(`SHOW COLUMNS FROM ${column};`)
@@ -100,15 +99,7 @@ function Search() {
     //     query
     // });
 
-    return <body>
-    <header> 
-        <span class="title_text">RateM</span>
-        <img class="title_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
-        <span class="title_text">Professor</span>
-    </header>
-    <section class="body">
-        <div>
-            <div> Enter your query here </div>
+    return <div>
         <div class="flex justify-center pt-10 pb-10">
             <input
                 className="border-2 border-gray-400 h-12 px-2 rounded-lg w-7/12"
@@ -118,13 +109,12 @@ function Search() {
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={onEnter}
             />
-        </div>
+        </div >
         <div class="flex justify-center">
             <ResultCard results={results} />
         </div>
     </div>
-    </section>
-</body>
+
 }
 
 export default Search;
