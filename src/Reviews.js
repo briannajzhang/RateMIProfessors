@@ -130,7 +130,7 @@ function Reviews() {
     };
 
     return <body>
-    <header> 
+    <header className="flex"> 
         <span className="header_text">RateM</span>
         <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I"></img>
         <span className="header_text">Professor</span>

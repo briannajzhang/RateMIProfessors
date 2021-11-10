@@ -2,7 +2,7 @@ import './Style.css'
 
 function AdvancedQueryOne() {
     return <body>
-    <header> 
+    <header className="flex"> 
         <span class="header_text">RateM</span>
         <img class="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
         <span class="header_text">Professor</span>
