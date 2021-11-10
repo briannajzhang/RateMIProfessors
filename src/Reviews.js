@@ -169,8 +169,8 @@ function Reviews() {
                 <br />
                 Rating:<input type="number" value={ratingInput} onChange={(e) => setRatingInput(e.target.value)} />/5
                 <br />
-                <button onClick={()=>{review ? updateReview() : addReview()}}>{review ? "Update" : "Post"}</button>
-                {review && <button onClick={()=>deleteReview()}>Remove</button>}
+                <button className="border-2 border-gray-400 h-8 px-2 rounded-lg" onClick={()=>{review ? updateReview() : addReview()}}>{review ? "Update" : "Post"}</button>
+                {review && <button className="border-2 border-gray-400 h-8 px-2 rounded-lg" onClick={()=>deleteReview()}>Remove</button>}
             </div>
         )}
     </div>
