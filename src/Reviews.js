@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import query from "./api";
+import './Style.css'
 
 function Reviews() {
     const [dept, setDept] = useState("");
@@ -128,7 +129,14 @@ function Reviews() {
         });
     };
 
-    return <div>
+    return <body>
+    <header> 
+        <span class="title_text">RateM</span>
+        <img class="title_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
+        <span class="title_text">Professor</span>
+    </header>
+    <section class="body">
+        <div>
         Write a review:
         <br />
         <select value={dept ?? "Select a department"} onChange={(e) => setDept(e.target.value)}>
@@ -166,6 +174,8 @@ function Reviews() {
             </div>
         )}
     </div>
+    </section>
+</body>
 }
 
 export default Reviews;

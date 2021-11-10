@@ -1,6 +1,6 @@
 import './Style.css'
 
-function AdvancedQueryOne() {
+function Search() {
     return <body>
     <header> 
         <span class="title_text">RateM</span>
@@ -10,7 +10,7 @@ function AdvancedQueryOne() {
     <section class="body">
         <div>This is the page for the first advanced query. Something will be returned here.</div>
     </section>
-</body>
+    </body>
 }
 
-export default AdvancedQueryOne;
+export default Search;
