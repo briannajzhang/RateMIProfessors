@@ -182,25 +182,25 @@ function Reviews() {
     };
 
     return <body>
-        <header className="flex">
-            <span className="header_text">RateM</span>
-            <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I"></img>
-            <span className="header_text">Professor</span>
-        </header>
+        <div className="logo"></div>
         <section className="body">
             <div>
-                <div>
+                <div className="page_txt">
                 Your NetID: <input type="text" value={student} onChange={(e) => setStudent(e.target.value)} />
                 </div>
 
                 <div className="write-review">
-                    <br />
-                    Write a review:
-                    <br />
+                    <div className="page_txt">
+                        <br />
+                        Write a review:
+                        <br />
+                    </div>
+                    <div className="page_txt">
                     <select value={dept ?? "Select a department"} onChange={(e) => setDept(e.target.value)}>
                         <option value="">Select a department</option>
                         {depts.map(d => <option value={d.id}>{d.id + " - " + d.name}</option>)}
                     </select>
+                    </div>
                     {dept && <br />}
                     {dept && <select value={course ?? "Select a course"} onChange={(e) => setCourse(e.target.value)}>
                         <option value="">Select a course</option>

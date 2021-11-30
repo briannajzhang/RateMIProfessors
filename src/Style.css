@@ -1,8 +1,42 @@
 body {
-    background-color: #cce6ff;
+    background-color: #13294b;
+    color: white;
+    font-family: 'Verdana';
 }
 header {
     background-color:#002855;
+}
+
+.home {
+    height: 80vh;
+    background-image: url("../src/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_txt {
+    padding-left: 27px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    background-image: url("../src/logo.jpg");
+    background-size:cover;
+    background-position: right;
+    width: 20vw;
+    height: 10vh;
+
+}
+
+.home-body {
+    color: white;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    top: 82%;
+    font-family: 'Verdana';
 }
 
 .title_text {
@@ -15,11 +49,28 @@ header {
     color: #E84A27;
 }
 
+.header {
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
 .header_image {
     margin-top: 10px;
     margin-inline: -5px;
     height: 25px;
     width: 25px;
+}
+
+.header_btn {
+    font-family: 'Verdana';
+    border-color: gray; 
+    border-width: 2px;
+    color: black; 
+    background-color: lightgray; 
+    border-radius: 6px;
+    padding: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
 }
 
 .write-review {

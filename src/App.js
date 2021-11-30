@@ -14,26 +14,25 @@ import Reviews from './Reviews';
 import CourseDetails from './CourseDetails';
 
 function App() {
-  // return (
-  //   <LoginPage />
-  // );
   return <Router basename={process.env.PUBLIC_URL}>
     <div id="navbar">
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/">
+      <div className="header">
+        <Link className="header_btn" to="/">
           Home
         </Link>
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/search">
+        <Link className="header_btn" to="/search">
           Search
         </Link>
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryOne">
+        <Link className="header_btn" to="/queryOne">
           Top 15 Professors
         </Link>
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryTwo">
+        <Link className="header_btn" to="/queryTwo">
           Most Reviewed Classes
         </Link>
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/your-reviews">
+        <Link className="header_btn" to="/your-reviews">
           Your Reviews
         </Link>
+      </div>
       </div>
       <br />
 

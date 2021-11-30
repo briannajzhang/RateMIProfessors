@@ -27,16 +27,14 @@ function AdvancedQueryTwo() {
     }, []);
 
     return <body>
-        <header className="flex">
-            <span className="header_text">RateM</span>
-            <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
-            <span className="header_text">Professor</span>
-        </header>
+        <div className="logo"></div>
         <section className="body">
-            <div>This is the page for the second advanced query, which returns the 15 most reviewed courses.</div>
-            <div>
-                Here are the fifteen courses with the most reviews:
-                {mostRated}
+            <div className="page_txt">
+                <div>This is the page for the second advanced query, which returns the 15 most reviewed courses.</div>
+                <div>
+                    Here are the fifteen courses with the most reviews:
+                    {mostRated}
+                </div>
             </div>
         </section>
     </body>

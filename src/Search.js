@@ -97,28 +97,24 @@ function Search() {
     // });
 
     return <body>
-    <header className="flex"> 
-        <span className="header_text">RateM</span>
-        <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
-        <span className="header_text">Professor</span>
-    </header>
     <section className="body">
         <div>
-            <div> Enter your query here </div>
-        <div className="flex justify-center pt-10 pb-10">
-            <input
-                className="border-2 border-gray-400 h-12 px-2 rounded-lg w-7/12"
-                type="text"
-                placeholder="Search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                onKeyDown={onEnter}
-            />
+            <div className="logo"></div>
+            <div className="page_txt"> Enter your query here </div>
+            <div className="flex justify-center pt-10 pb-10">
+                <input
+                    className="border-2 border-gray-400 h-12 px-2 rounded-lg w-7/12"
+                    type="text"
+                    placeholder="Search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyDown={onEnter}
+                />
+            </div>  
+            <div className="flex justify-center">
+                <ResultCard results={results} />
+            </div>
         </div>
-        <div className="flex justify-center">
-            <ResultCard results={results} />
-        </div>
-    </div>
     </section>
 </body>
 }
