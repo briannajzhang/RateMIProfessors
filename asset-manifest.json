@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/RateMIProfessors/static/css/main.e6a29cc0.chunk.css",
-    "main.js": "/RateMIProfessors/static/js/main.7811663a.chunk.js",
-    "main.js.map": "/RateMIProfessors/static/js/main.7811663a.chunk.js.map",
+    "main.css": "/RateMIProfessors/static/css/main.0fc85bb4.chunk.css",
+    "main.js": "/RateMIProfessors/static/js/main.c890e71a.chunk.js",
+    "main.js.map": "/RateMIProfessors/static/js/main.c890e71a.chunk.js.map",
     "runtime-main.js": "/RateMIProfessors/static/js/runtime-main.eb2e68a8.js",
     "runtime-main.js.map": "/RateMIProfessors/static/js/runtime-main.eb2e68a8.js.map",
     "static/js/2.8fc9ecd9.chunk.js": "/RateMIProfessors/static/js/2.8fc9ecd9.chunk.js",
     "static/js/2.8fc9ecd9.chunk.js.map": "/RateMIProfessors/static/js/2.8fc9ecd9.chunk.js.map",
     "index.html": "/RateMIProfessors/index.html",
-    "static/css/main.e6a29cc0.chunk.css.map": "/RateMIProfessors/static/css/main.e6a29cc0.chunk.css.map",
-    "static/js/2.8fc9ecd9.chunk.js.LICENSE.txt": "/RateMIProfessors/static/js/2.8fc9ecd9.chunk.js.LICENSE.txt"
+    "static/css/main.0fc85bb4.chunk.css.map": "/RateMIProfessors/static/css/main.0fc85bb4.chunk.css.map",
+    "static/js/2.8fc9ecd9.chunk.js.LICENSE.txt": "/RateMIProfessors/static/js/2.8fc9ecd9.chunk.js.LICENSE.txt",
+    "static/media/Style.css": "/RateMIProfessors/static/media/logo.17a6df87.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.eb2e68a8.js",
     "static/js/2.8fc9ecd9.chunk.js",
-    "static/css/main.e6a29cc0.chunk.css",
-    "static/js/main.7811663a.chunk.js"
+    "static/css/main.0fc85bb4.chunk.css",
+    "static/js/main.c890e71a.chunk.js"
   ]
 }
