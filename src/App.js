@@ -11,7 +11,7 @@ import Search from './Search';
 import AdvancedQueryOne from './AdvOne';
 import AdvancedQueryTwo from './AdvTwo';
 import Reviews from './Reviews';
-
+import CourseDetails from './CourseDetails';
 
 function App() {
   // return (
@@ -26,13 +26,13 @@ function App() {
           Search
         </Link>
         <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryOne">
-          Advanced Query 1
+          Top 15 Professors
         </Link>
         <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/queryTwo">
-          Advanced Query 2
+          Most Reviewed Classes
         </Link>
-        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/reviews">
-          Reviews
+        <Link className="border-2 border-gray-400 h-8 px-2 rounded-lg" to="/your-reviews">
+          Your Reviews
         </Link>
       </div>
       <br />
@@ -50,8 +50,11 @@ function App() {
         <Route path="/search">
           <Search />
         </Route>
-        <Route path="/reviews">
+        <Route path="/your-reviews">
           <Reviews />
+        </Route>
+        <Route path="/course/:courseNumber">
+          <CourseDetails />
         </Route>
         <Route path="/">
           <Home />

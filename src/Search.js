@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import query from "./api";
 import './Style.css'
-
-const apiGetColumnNames = (column: string): string[] => {
-    return query(`SHOW COLUMNS FROM ${column};`)
-        .then((cols) => cols.map(col => col[0]))
-};
 
 function ResultCard(props) {
 
@@ -14,16 +10,16 @@ function ResultCard(props) {
     console.log(props.results)
     for (const result of props.results) {
         items.push(
-            <div class="p-4 flex space-x-4">
+            <Link className="p-4 flex space-x-4" to={`/course/${result[3]}`}>
                 <p className="w-100px">{result[3]}</p>
                 <p>{result[4]}</p>
-            </div>
+            </Link>
         // <p>{`${result[3]} - ${result[4]}`}</p>
         )
     }
 
-    return <div class="flex justify-center px-10 pt-10 pb-10 w-screen">
-        <div class="w-11/12 border-2 border-gray-400 rounded-lg divide-y divide-gray-100">
+    return <div className="flex justify-center px-10 pt-10 pb-10 w-screen">
+        <div className="w-11/12 border-2 border-gray-400 rounded-lg divide-y divide-gray-100">
 
 
         {/* ${JSON.stringify(props.results)} */}
@@ -39,10 +35,10 @@ function Search() {
     const [results, setResults] = useState([])
     
     const onEnter = async (e) => {
-        if (e.key != "Enter") return;
+        if (e.key !== "Enter") return;
         console.log(`Enter Pressed: ${search}`)
 
-        if (search == lastSearch) return;
+        if (search === lastSearch) return;
         console.log("Running search")
 
         let tsearch = search.trim();
@@ -91,9 +87,9 @@ function Search() {
         matches = matches.slice(0, 50);
         console.log(matches);
 
-        if (matches == results) return;
+        if (matches === results) return;
         setResults(matches);
-
+        setLastSearch(search);
     }
 
     // useEffect(() => {
@@ -102,14 +98,14 @@ function Search() {
 
     return <body>
     <header className="flex"> 
-        <span class="header_text">RateM</span>
-        <img class="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
-        <span class="header_text">Professor</span>
+        <span className="header_text">RateM</span>
+        <img className="header_image" src="http://ansatuiuc.web.engr.illinois.edu/images/Illinois_Block_I.png" alt="Block I" height="110" width="110"></img>
+        <span className="header_text">Professor</span>
     </header>
-    <section class="body">
+    <section className="body">
         <div>
             <div> Enter your query here </div>
-        <div class="flex justify-center pt-10 pb-10">
+        <div className="flex justify-center pt-10 pb-10">
             <input
                 className="border-2 border-gray-400 h-12 px-2 rounded-lg w-7/12"
                 type="text"
@@ -119,7 +115,7 @@ function Search() {
                 onKeyDown={onEnter}
             />
         </div>
-        <div class="flex justify-center">
+        <div className="flex justify-center">
             <ResultCard results={results} />
         </div>
     </div>

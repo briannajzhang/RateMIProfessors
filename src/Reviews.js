@@ -44,7 +44,28 @@ function Reviews() {
     }
 
     useEffect(() => {
-        updateReviews();
+        const fields = "c.departmentId, courseNumber, crn, semester, professor, name, rating, review";
+        const tables =
+        `Courses c
+        NATURAL JOIN Offerings o
+        JOIN OfferingsToProfessorRelations opr ON opr.offering = o.id
+        JOIN Reviews r ON r.offeringToProfessorRelation = opr.id
+        JOIN Professors p ON opr.professor = p.netid`;
+        query(`SELECT ${fields} FROM ${tables} WHERE student = "${student}";`).then(res => {
+            let newReviews = res.map(elem => {
+                return {
+                    ddepartmentId: elem[0],
+                    courseNumber: elem[1],
+                    crn: elem[2],
+                    semester: elem[3],
+                    professor: elem[4],
+                    name: elem[5],
+                    rating: elem[6],
+                    review: elem[7]
+                }
+            });
+            setReviews(newReviews);
+        });
     }, [student])
 
     //get departments
