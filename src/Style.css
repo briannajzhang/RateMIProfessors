@@ -21,3 +21,24 @@ header {
     height: 25px;
     width: 25px;
 }
+
+.write-review {
+    float: left;
+    width: 70%;
+}
+
+.existing-reviews {
+    float: left;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.existing-review-box {
+    display: flex;
+    flex-direction: column;
+    border-color: #E84A27;
+    border-width: 2px;
+    padding: 2px;
+    margin-top: 5px;
+}
