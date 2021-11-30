@@ -183,24 +183,27 @@ function Reviews() {
 
     return <body>
         <div className="logo"></div>
-        <section className="body">
+        <section className="body_txt">
             <div>
                 <div className="page_txt">
-                Your NetID: <input type="text" value={student} onChange={(e) => setStudent(e.target.value)} />
-                </div>
+                    <body>
+                        Your NetID:
+                    </body>
+                    <br />
+                    <input type="text" value={student} onChange={(e) => setStudent(e.target.value)} />
+                </div> 
 
+                <div className="page_txt">
                 <div className="write-review">
-                    <div className="page_txt">
-                        <br />
+                    <br />
+                    <body>
                         Write a review:
-                        <br />
-                    </div>
-                    <div className="page_txt">
+                    </body>
+                    <br />
                     <select value={dept ?? "Select a department"} onChange={(e) => setDept(e.target.value)}>
                         <option value="">Select a department</option>
                         {depts.map(d => <option value={d.id}>{d.id + " - " + d.name}</option>)}
                     </select>
-                    </div>
                     {dept && <br />}
                     {dept && <select value={course ?? "Select a course"} onChange={(e) => setCourse(e.target.value)}>
                         <option value="">Select a course</option>
@@ -223,23 +226,33 @@ function Reviews() {
                             <p>{review ? "Update " : "Write "}Your Review:</p>
                             <textarea style={{ width: '70%', height: '150px' }} value={reviewInput} onChange={(e) => setReviewInput(e.target.value)} />
                             <br />
-                            Rating:<input type="number" value={ratingInput} onChange={(e) => setRatingInput(e.target.value)} />/5
+                            <p>
+                            Rating (out of 5):
+                            </p>
+                            <input type="number" value={ratingInput} onChange={(e) => setRatingInput(e.target.value)} />
                             <br />
                             <button className="border-2 border-gray-400 h-8 px-2 rounded-lg" onClick={() => { review ? updateReview() : addReview() }}>{review ? "Update" : "Post"}</button>
+                            <br />
                             {review && <button className="border-2 border-gray-400 h-8 px-2 rounded-lg" onClick={() => deleteReview()}>Remove</button>}
                         </div>
                     )}
                 </div>
+                </div>
                 <div className="existing-reviews">
+                    <body>
                     Your reviews:
+                    </body>
+                    
                     <br/>
-                    {reviews.map((r,i) => {
-                        return <div className="existing-review-box" key={i}>
-                            <p>{`${r.courseNumber} - ${r.rating}/5`}</p>
-                            <p>{r.name}</p>
-                            <p>{`${r.semester} - ${r.crn}`}</p>
-                        </div>
-                    })}
+                    <body>
+                        {reviews.map((r,i) => {
+                            return <div className="existing-review-box" key={i}>
+                                <p>{`${r.courseNumber} - ${r.rating}/5`}</p>
+                                <p>{r.name}</p>
+                                <p>{`${r.semester} - ${r.crn}`}</p>
+                            </div>
+                        })}
+                    </body>
                 </div>
             </div>
         </section>

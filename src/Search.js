@@ -102,14 +102,16 @@ function Search() {
             <div className="logo"></div>
             <div className="page_txt"> Enter your query here </div>
             <div className="flex justify-center pt-10 pb-10">
-                <input
-                    className="border-2 border-gray-400 h-12 px-2 rounded-lg w-7/12"
-                    type="text"
-                    placeholder="Search"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    onKeyDown={onEnter}
-                />
+                <div className="body_txt">
+                    <input
+                        className="border-2 border-gray-400 h-12 px-2 rounded-lg w-100"
+                        type="text"
+                        placeholder="Search"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={onEnter}
+                    />
+                </div>
             </div>  
             <div className="flex justify-center">
                 <ResultCard results={results} />

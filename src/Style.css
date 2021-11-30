@@ -7,6 +7,15 @@ header {
     background-color:#002855;
 }
 
+p {
+    color: white;
+}
+
+.body_txt{
+    color: black;
+    font-family: 'Verdana';
+}
+
 .home {
     height: 80vh;
     background-image: url("../src/background.jpg");
